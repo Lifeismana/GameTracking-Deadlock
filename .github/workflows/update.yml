@@ -17,8 +17,10 @@ jobs:
     process:
         permissions:
             contents: write
-        uses: steamtracking/gametracking/.github/workflows/gametracking.yml@master    
-        secrets: inherit
+        uses: lifeismana/gametracking/.github/workflows/gametracking.yml@master
+        secrets: 
+            STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+            STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
         with:
           branch: ${{ github.event.inputs.branch }}
           appid: 1422450
